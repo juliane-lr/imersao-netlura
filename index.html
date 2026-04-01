@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Seleção de Perfil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Quem está assistindo?</h1>
+            <button id="theme-toggle" type="button" aria-label="Alternar modo claro/escuro">
+                Modo claro
+            </button>
+        </header>
+        
+        <nav class="profiles" aria-label="Seleção de perfis">
+            <ul>
+                <li>
+                    <a href="catalogo/catalogo.html" class="profile">
+                        <img src="/assets/perfil-1.png" alt="Desenho de um gato segurando um chapéu">
+                        <span>Ana</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="catalogo/catalogo.html" class="profile">
+                        <img src="/assets/perfil-2.png" alt="Desenho de um cachorro com chapéu">
+                        <span>Bia</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="catalogo/catalogo.html" class="profile">
+                        <img src="/assets/perfil-3.png" alt="Desenho de um gato com monóculo">
+                        <span>Carla</span>
+                    </a>
+                </li>
+
+                
+            </ul>
+        </nav>
+    </main>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        function updateToggleText() {
+            const isDark = body.classList.contains('dark-mode');
+            themeToggle.textContent = isDark ? 'Modo claro' : 'Modo escuro';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            body.classList.toggle('light-mode');
+            updateToggleText();
+            localStorage.setItem('netflix-theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+        });
+
+        const savedTheme = localStorage.getItem('netflix-theme');
+        if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+            body.classList.remove('dark-mode');
+        } else {
+            body.classList.add('dark-mode');
+            body.classList.remove('light-mode');
+        }
+        updateToggleText();
+    </script>
+    <script>
+        // Handle profile selection
+        const profileLinks = document.querySelectorAll('.profile');
+        
+        profileLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                
+                const img = link.querySelector('img');
+                const span = link.querySelector('span');
+                
+                if (img && span) {
+                    const nome = span.textContent;
+                    const imagem = img.src;
+                    
+                    localStorage.setItem('perfilAtivoNome', nome);
+                    localStorage.setItem('perfilAtivoImagem', imagem);
+                }
+                
+                // Redirect to the catalog
+                window.location.href = link.href;
+            });
+        });
+    </script>
+    <script src="js/index.js"></script>
+</body>
+</html>

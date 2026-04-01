@@ -1,0 +1,180 @@
+/* Reset de margens e paddings para todos os elementos */
+* {
+    margin: 0; /* Remove margem externa padrão */
+    padding: 0; /* Remove preenchimento interno padrão */
+    box-sizing: border-box; /* Inclui padding e border na largura/altura total */
+}
+
+/* Estilos para o corpo da página */
+body {
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%); /* Gradiente diagonal escuro típico da Netflix */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Família de fontes moderna */
+    color: #ffffff; /* Cor do texto branca */
+    min-height: 100vh; /* Altura mínima de 100% da viewport */
+    display: flex; /* Usa flexbox para layout */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+body.light-mode {
+    background: linear-gradient(135deg, #f7f7f7 0%, #e2e2e2 100%); /* Por padrão, modo claro mais suave */
+    color: #111111; /* Texto escuro no modo claro */
+}
+
+body.light-mode a.profile span {
+    color: #e50914; /* Mantém a marca na cor vermelha */
+}
+
+#theme-toggle {
+    margin-top: 20px; /* Espaço acima do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: 2px solid rgba(255, 255, 255, 0.8); /* Borda translúcida */
+    border-radius: 8px; /* Bordas arredondadas */
+    background: rgba(0, 0, 0, 0.4); /* Fundo esmaecido */
+    color: #ffffff; /* Texto branco */
+    cursor: pointer; /* Estilo de cursor de botão */
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transições suaves */
+}
+
+body.light-mode #theme-toggle {
+    background: rgba(255, 255, 255, 0.85); /* Fundo claro no modo light */
+    color: #111111; /* Texto escuro no modo light */
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+#theme-toggle:hover {
+    background: rgba(229, 9, 20, 0.85);
+    color: #ffffff;
+    border-color: #e50914;
+}
+
+/* Estilos para o elemento main */
+main {
+    width: 100%; /* Largura total do container pai */
+    max-width: 1000px; /* Largura máxima para telas grandes */
+    padding: 40px 20px; /* Preenchimento interno: 40px cima/baixo, 20px esquerda/direita */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    text-align: center; /* Alinha texto ao centro */
+    margin-bottom: 60px; /* Margem inferior de 60px */
+}
+
+/* Estilos para o título h1 dentro do header */
+header h1 {
+    font-size: 3.5rem; /* Tamanho da fonte grande (56px) */
+    font-weight: 700; /* Peso da fonte negrito */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+    text-shadow: 2px 4px 20px rgba(229, 9, 20, 0.3); /* Sombra vermelha sutil */
+    margin-bottom: 10px; /* Margem inferior de 10px */
+}
+
+/* Estilos para a navegação de perfis */
+nav.profiles {
+    width: 100%; /* Largura total */
+}
+
+/* Estilos para a lista não ordenada dentro da navegação */
+nav.profiles ul {
+    list-style: none; /* Remove marcadores da lista */
+    display: grid; /* Usa CSS Grid para layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colunas responsivas com mínimo 200px */
+    gap: 20px; /* Espaçamento entre itens */
+    justify-items: center; /* Centraliza itens horizontalmente */
+}
+
+/* Estilos para os botões de perfil */
+a.profile {
+    background: none; /* Remove fundo padrão */
+    border: none; /* Remove borda padrão */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Direção vertical */
+    align-items: center; /* Centraliza itens verticalmente */
+    gap: 20px; /* Espaçamento entre elementos filhos */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transições suaves para transform e filter */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Estilos para o hover nos botões de perfil */
+a.profile:hover {
+    transform: scale(1.1); /* Aumenta tamanho em 10% */
+    filter: brightness(1.2); /* Aumenta brilho */
+}
+
+/* Estilos para o foco nos botões de perfil (acessibilidade) */
+a.profile:focus {
+    outline: 3px solid #e50914; /* Outline vermelho da Netflix */
+    outline-offset: 8px; /* Deslocamento do outline */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilos para as imagens dentro dos botões */
+a.profile img {
+    width: 150px; /* Largura fixa */
+    height: 150px; /* Altura fixa */
+    border-radius: 10px; /* Bordas arredondadas */
+    object-fit: cover; /* Ajusta imagem sem distorcer */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Sombra escura */
+    transition: box-shadow 0.3s ease; /* Transição suave para sombra */
+}
+
+/* Estilos para o hover nas imagens */
+a.profile:hover img {
+    box-shadow: 0 12px 40px rgba(229, 9, 20, 0.4); /* Sombra vermelha mais intensa */
+}
+
+/* Estilos para os spans (nomes dos perfis) */
+a.profile span {
+    font-size: 1.2rem; /* Tamanho da fonte */
+    font-weight: 500; /* Peso médio */
+    color: #e50914; /* Cor vermelha da Netflix sempre visível */
+}
+
+/* Media query para telas menores que 768px (tablets) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem; /* Reduz tamanho da fonte */
+    }
+
+    nav.profiles ul {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colunas menores */
+        gap: 30px; /* Reduz espaçamento */
+    }
+
+    a.profile img {
+        width: 120px; /* Reduz largura da imagem */
+        height: 120px; /* Reduz altura da imagem */
+    }
+
+    a.profile span {
+        font-size: 1rem; /* Reduz tamanho da fonte */
+    }
+}
+
+/* Media query para telas menores que 480px (celulares) */
+@media (max-width: 480px) {
+    main {
+        padding: 20px 15px; /* Reduz padding */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Reduz ainda mais a fonte */
+        letter-spacing: 1px; /* Reduz espaçamento entre letras */
+    }
+
+    nav.profiles ul {
+        grid-template-columns: repeat(2, 1fr); /* Sempre 2 colunas */
+        gap: 20px; /* Espaçamento menor */
+    }
+
+    a.profile img {
+        width: 100px; /* Largura ainda menor */
+        height: 100px; /* Altura ainda menor */
+    }
+
+    a.profile span {
+        font-size: 0.9rem; /* Fonte menor */
+    }
+}
