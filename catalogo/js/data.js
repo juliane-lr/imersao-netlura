@@ -26,16 +26,20 @@ export const categories = [
             { img: "https://resizing.flixster.com/KHP8WIWqGr-3MmT1Sa9GvDtb3Q8=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p185008_b_h9_ac.jpg", top10: true, badge: "Nova temporada", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=tNcDHWpselE" },
             { img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuX_01R6QUqqhYYE6nelfGBEdNttqR45381g&s", top10: true, youtube: "https://www.youtube.com/watch?v=rCj-Fb1OmXg" },
             { img: "https://m.media-amazon.com/images/S/pv-target-images/b58657c57cd6b28bd8d9686042842c9d3285e5961284c6238825360b6f2d69ef.png", badge: "Novo episódio", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=bBervTlBurY" },
-            { img: "https://http2.mlstatic.com/D_NQ_NP_931287-MLB94038820487_102025-O.webp", badge: "Novidade", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=iySNbu_Gr98" },
+            { img: "https://br.web.img3.acsta.net/r_654_368/newsv7/20/09/01/19/45/5822933.jpg", badge: "Novidade", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=Nu5z3AT2jv8" },
         ]
     },
     {
-        title: "Para maratonar",
+        title: "Mais assistidos",
         items: [
-            { img: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=600&auto=format&fit=crop", top10: true, youtube: "https://www.youtube.com/watch?v=wLo9bfgla4k" },
-            { img: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=600&auto=format&fit=crop", top10: true, badge: "Novidade", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=wLo9bfgla4k" },
-            { img: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=600&auto=format&fit=crop", top10: true, badge: "Novo episódio", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=wLo9bfgla4k" },
-            { img: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=600&auto=format&fit=crop", top10: true, badge: "Novo episódio", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=wLo9bfgla4k" },
+            { img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3QCk2DrPJRXpNq0nvRTAsFTowJ_mMxmtvHQ&s", top10: true, 
+                youtube: "https://www.youtube.com/watch?v=ZoknZInQM3o" },
+            { img: "https://cinecambui.com.br/storage/movies/lpPdM5qjkRHBj4nqWZqx2sT9e8tSZfbzQO7og06w.webp", top10: true, badge: "Novidade", badgeColor: "red", 
+                youtube: "https://www.youtube.com/watch?v=4SP2X7KCulU" },
+            { img: "https://i.ytimg.com/vi/AHMdF9KTBnY/hq720.jpg", top10: true, badge: "Novo episódio", badgeColor: "red", 
+                youtube: "https://www.youtube.com/watch?v=AOBPXs_euPA" },
+            { img: "https://br.web.img2.acsta.net/medias/nmedia/18/90/43/36/20096333.jpg", top10: true, badge: "Novo episódio", badgeColor: "red", 
+                youtube: "https://www.youtube.com/watch?v=w1O5LThfp7w" },
         ]
     }
 ];
