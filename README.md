@@ -5,3 +5,5 @@ Criamos e configuramos a página inicial com auxílio da IA.
 Os arquivos do Catálogo foram disponibilizados prontos para personalização.
 
 Utilizamos HTML, CSS e JavaScript.
+
+Página disponível em https://juliane-lr.github.io/imersao-netlura/
